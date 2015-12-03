@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
 
+
+
   resources :tile_categories
   resources :tiles
   resources :house_plaques
   resources :house_number_tiles
   resources :finishes
+
+  get 'homepage' => 'homepage#index'
+
+  root 'homepage#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
