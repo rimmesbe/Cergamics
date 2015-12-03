@@ -1,0 +1,8 @@
+<div>
+  <h1><%= @tile.name %></h1>
+  <h3><%= @tile.description %></h3>
+  <h4>Finishes</h4>
+  <% @tile.finishes.each do |finish| %>
+    <li><%= "#{finish.description} #{finish.category}-#{finish.series_no}-#{finish.finish}" %></li>
+  <%end%>
+</div>
