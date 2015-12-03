@@ -1,0 +1,2 @@
+module HousePlaquesHelper
+end
