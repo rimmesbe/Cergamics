@@ -1,0 +1,9 @@
+<div>
+  <h1><%= @tile_category.title%></h1>
+  <ul>
+    <% @tile_category.tiles.each do |tile| %>
+      <li><%= link_to tile.name, tile_path(tile) %></li>
+    <%end%>
+  </ul>
+
+</div>

@@ -1,0 +1,2 @@
+module TileCategoriesHelper
+end
