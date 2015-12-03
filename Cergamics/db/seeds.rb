@@ -14,8 +14,12 @@ test_tile = Tile.create(name: "Tulip",group: "tulip",style: "decorative",descrip
 
 test_tile2 = Tile.create(name: "Daisy",group: "daisy",style: "accent",description: "white as a dove",size: "2x2",price: 15.15,tile_category_id: test_tile_category.id)
 
-test_house_plaque = HousePlaque.create(name: "Fish House Plaque", size: "11x10")
-
 test_finish = Finish.create(description: "clear coat",category: "HP",series_no: "001",finish:"PS",price: 26.87,finished_item_id: test_tile.id, finished_item_type: "Tile")
 
+test_house_plaque = HousePlaque.create(name: "Fish House Plaque", size: "11x10")
+
 test_finish2 = Finish.create(description: "Monochrome",category: "HP",series_no: "001",finish:"MC",price: 126.87,finished_item_id: test_house_plaque.id, finished_item_type: "HousePlaque")
+
+test_house_number = HouseNumberTile.create(name: "Morning Glory", size: "2x10")
+
+test_finish3 = Finish.create(description: "Monochrome",category: "HP",series_no: "001",finish:"MC",price: 12.87,finished_item_id: test_house_number.id, finished_item_type: "HouseNumberTile")
