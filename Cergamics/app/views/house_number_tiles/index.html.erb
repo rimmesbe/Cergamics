@@ -1,0 +1,12 @@
+<div>
+  <h1>House Number Tiles</h1>
+  <% @house_number_tiles.each do |tile| %>
+    <h3><%= tile.name %></h3>
+    <p><%= tile.size %></p>
+    <ul>
+      <% tile.finishes.each do |finish| %>
+        <li><%= "#{finish.description} #{finish.category}-#{finish.series_no}-#{finish.finish}"%></li>
+      <%end%>
+    </ul>
+  <%end%>
+</div>

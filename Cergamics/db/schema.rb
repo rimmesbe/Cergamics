@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151203200235) do
+ActiveRecord::Schema.define(version: 20151203222248) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,22 @@ ActiveRecord::Schema.define(version: 20151203200235) do
   end
 
   add_index "finishes", ["finished_item_type", "finished_item_id"], name: "index_finishes_on_finished_item_type_and_finished_item_id", using: :btree
+
+  create_table "house_number_tiles", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "size"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "house_plaques", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "size"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tile_categories", force: :cascade do |t|
     t.string   "title",      null: false

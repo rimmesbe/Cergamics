@@ -1,0 +1,12 @@
+<div>
+  <h1>House Plaques</h1>
+  <% @house_plaques.each do |plaque| %>
+    <h3><%= plaque.name %></h3>
+    <p><%= plaque.size %></p>
+    <ul>
+      <% plaque.finishes.each do |finish| %>
+        <li><%= "#{finish.description} #{finish.category}-#{finish.series_no}-#{finish.finish}"%></li>
+      <%end%>
+  <%end%>
+
+</div>
