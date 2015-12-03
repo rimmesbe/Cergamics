@@ -1,0 +1,8 @@
+<div>
+  <h1>Tile Categories</h1>
+  <ul>
+    <% @tile_categories.each do |category| %>
+      <li><%= link_to category.title, tile_category_path(category)%></li>
+    <% end %>
+  </ul>
+</div>
