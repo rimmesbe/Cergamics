@@ -1,5 +1,5 @@
 class Tile < ActiveRecord::Base
-  belongs_to :tile_category
+  belongs_to :tile_group
   has_many :finishes, as: :finished_item
 
   def price_validation
