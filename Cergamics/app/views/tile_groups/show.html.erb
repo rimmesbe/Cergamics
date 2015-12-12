@@ -1,0 +1,17 @@
+<div>
+  <h1><%= @tile_group.name%></h1>
+  <ul>
+    <% @tile_group.tiles.each do |tile| %>
+      <li><%= tile.name %></li>
+        <table>
+          <% tile.finishes.each do |finish| %>
+            <tr>
+              <td><%= "#{finish.category}-#{finish.series_no}-#{finish.finish}" %></td>
+              <td><%= finish.description %></td>
+            </tr>
+          <%end%>
+        </table>
+    <%end%>
+  </ul>
+
+</div>

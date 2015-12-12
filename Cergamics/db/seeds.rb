@@ -11,29 +11,63 @@ test_tile_category2 = TileCategory.create(title: "Sea Life")
 test_tile_category3 = TileCategory.create(title: "Birds")
 
 floral_names = ["Tulip", "Daisy", "Rose", "Lily", "Sunflower", "Morning Glory", "Orchid", "Marigold"]
+sea_life_names = ["Starfish", "Goldfish", "Whales", "Seashells", "Marlin"]
+bird_names = ["Seagull", "Robbin", "Bluejay", "Woodpecker", "Eagle", "Hawk"]
 
-test_tile = Tile.create(name: "Tulip",group: "tulip",style: "decorative",description: "Very pretty",size: "6x6",price: 25.25,tile_category_id: test_tile_category.id)
+tile_style = ["accent", "decorative", "border"]
 
-test_tile2 = Tile.create(name: "Daisy",group: "daisy",style: "accent",description: "white as a dove",size: "2x2",price: 15.15,tile_category_id: test_tile_category.id)
+finish_description = ["clear coat", "monochrome", "polychrome"]
+finish_category = ["FL", "SL", "BD", "HP", "HN"]
+finish_series_no = ["001", "002", "003", "004", "005"]
+finish_type = ["MC", "PC", "PS"]
 
-test_tile3 = Tile.create(name: "Rose",group: "rose",style: "border",description: "red and thorny",size: "2x6",price: 35.15,tile_category_id: test_tile_category.id)
+floral_names.each do |name|
+  tile_group = TileGroup.create(name: name, description: "...the tile_group description")
+  test_tile_category.tile_groups << tile_group
+  3.times do |index|
+    tile = Tile.create(name: "#{name} #{index}", description: "...the tile description", style: tile_style[rand(3)], size: "6x6", price: 24.24)
+    tile_group.tiles << tile
+    3.times do |i|
+      tile.finishes << Finish.create(description: finish_description[i], category: finish_category[0], series_no: finish_series_no[i], finish: finish_type[rand(3)], price: 23.88, finished_item_type: "Tile")
+    end
+  end
+end
 
-test_tile4 = Tile.create(name: "Goldfish",group: "goldfish",style: "accent",description: "likes to swim",size: "2x2",price: 15.15,tile_category_id: test_tile_category2.id)
+sea_life_names.each do |name|
+  tile_group = TileGroup.create(name: name, description: "...the tile_group description")
+  test_tile_category2.tile_groups << tile_group
+  3.times do |index|
+    tile = Tile.create(name: "#{name} #{index}", description: "...the tile description", style: tile_style[rand(3)], size: "6x6", price: 24.24)
+    tile_group.tiles << tile
+    3.times do |i|
+      tile.finishes << Finish.create(description: finish_description[i], category: finish_category[1], series_no: finish_series_no[i], finish: finish_type[rand(3)], price: 33.88, finished_item_type: "Tile")
+    end
+  end
+end
 
-test_finish = Finish.create(description: "clear coat",category: "HP",series_no: "001",finish:"PS",price: 26.87,finished_item_id: test_tile.id, finished_item_type: "Tile")
-test_finish2 = Finish.create(description: "polychrome",category: "HP",series_no: "002",finish:"PS",price: 26.87,finished_item_id: test_tile.id, finished_item_type: "Tile")
-test_finish3 = Finish.create(description: "clear coat",category: "HP",series_no: "003",finish:"PS",price: 26.87,finished_item_id: test_tile.id, finished_item_type: "Tile")
+bird_names.each do |name|
+  tile_group = TileGroup.create(name: name, description: "...the tile_group description")
+  test_tile_category3.tile_groups << tile_group
+  3.times do |index|
+    tile = Tile.create(name: "#{name} #{index}", description: "...the tile description", style: tile_style[rand(3)], size: "6x6", price: 24.24)
+    tile_group.tiles << tile
+    3.times do |i|
+      tile.finishes << Finish.create(description: finish_description[i], category: finish_category[2], series_no: finish_series_no[i], finish: finish_type[rand(3)], price: 13.88, finished_item_type: "Tile")
+    end
+  end
+end
 
-test_house_plaque = HousePlaque.create(name: "Fish House Plaque", size: "11x10")
-test_house_plaque2 = HousePlaque.create(name: "Rose House Plaque", size: "12x10")
 
-test_finish4 = Finish.create(description: "Monochrome",category: "HC",series_no: "001",finish:"MC",price: 126.87,finished_item_id: test_house_plaque.id, finished_item_type: "HousePlaque")
-test_finish5 = Finish.create(description: "Polychrome",category: "HC",series_no: "002",finish:"MC",price: 126.87,finished_item_id: test_house_plaque.id, finished_item_type: "HousePlaque")
-test_finish6 = Finish.create(description: "Monochrome",category: "HC",series_no: "003",finish:"MC",price: 126.87,finished_item_id: test_house_plaque2.id, finished_item_type: "HousePlaque")
+# test_house_plaque = HousePlaque.create(name: "Fish House Plaque", size: "11x10")
+# test_house_plaque2 = HousePlaque.create(name: "Rose House Plaque", size: "12x10")
 
-test_house_number = HouseNumberTile.create(name: "Morning Glory", size: "2x10")
-test_house_number2 = HouseNumberTile.create(name: "Sea Shells", size: "2x10")
+# test_finish4 = Finish.create(description: "Monochrome",category: "HC",series_no: "001",finish:"MC",price: 126.87,finished_item_id: test_house_plaque.id, finished_item_type: "HousePlaque")
+# test_finish5 = Finish.create(description: "Polychrome",category: "HC",series_no: "002",finish:"MC",price: 126.87,finished_item_id: test_house_plaque.id, finished_item_type: "HousePlaque")
+# test_finish6 = Finish.create(description: "Monochrome",category: "HC",series_no: "003",finish:"MC",price: 126.87,finished_item_id: test_house_plaque2.id, finished_item_type: "HousePlaque")
 
-test_finish7 = Finish.create(description: "Monochrome",category: "NP",series_no: "001",finish:"MC",price: 12.87,finished_item_id: test_house_number.id, finished_item_type: "HouseNumberTile")
-test_finish8 = Finish.create(description: "Polyspecial",category: "NP",series_no: "002",finish:"MC",price: 12.87,finished_item_id: test_house_number.id, finished_item_type: "HouseNumberTile")
-test_finish9 = Finish.create(description: "Monochrome",category: "NP",series_no: "003",finish:"MC",price: 12.87,finished_item_id: test_house_number2.id, finished_item_type: "HouseNumberTile")
+# test_house_number = HouseNumberTile.create(name: "Morning Glory", size: "2x10")
+# test_house_number2 = HouseNumberTile.create(name: "Sea Shells", size: "2x10")
+
+# test_finish7 = Finish.create(description: "Monochrome",category: "NP",series_no: "001",finish:"MC",price: 12.87,finished_item_id: test_house_number.id, finished_item_type: "HouseNumberTile")
+# test_finish8 = Finish.create(description: "Polyspecial",category: "NP",series_no: "002",finish:"MC",price: 12.87,finished_item_id: test_house_number.id, finished_item_type: "HouseNumberTile")
+# test_finish9 = Finish.create(description: "Monochrome",category: "NP",series_no: "003",finish:"MC",price: 12.87,finished_item_id: test_house_number2.id, finished_item_type: "HouseNumberTile")
