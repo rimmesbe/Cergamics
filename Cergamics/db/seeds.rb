@@ -75,3 +75,4 @@ house_number_names.each do |name|
   end
 end
 
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

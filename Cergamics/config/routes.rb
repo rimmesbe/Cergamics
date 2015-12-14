@@ -1,6 +1,19 @@
 Rails.application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 
+  namespace :admin do
+    resources :tiles do
+      resources :finishes
+    end
+    resources :house_plaques do
+      resources :finishes
+    end
+    resources :house_number_tiles do
+      resources :finishes
+    end
+  end
 
   resources :tile_categories do
     resources :tile_groups do
