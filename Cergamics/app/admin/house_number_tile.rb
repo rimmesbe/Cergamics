@@ -7,5 +7,15 @@ ActiveAdmin.register HouseNumberTile do
     end
   end
 
+  index do
+    column :id
+    column :name do |number|
+      link_to number.name, admin_house_number_tile_path(number)
+    end
+    column :size
+    column :image
+    actions
+  end
+
   permit_params :name, :size, :image
 end

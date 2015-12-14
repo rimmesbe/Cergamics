@@ -7,6 +7,15 @@ ActiveAdmin.register HousePlaque do
     end
   end
 
-  permit_params :name, :size, :image
+  index do
+    column :id
+    column :name do |plaque|
+      link_to plaque.name, admin_house_plaque_path(plaque)
+    end
+    column :size
+    column :image
+    actions
+  end
 
+  permit_params :name, :size, :image
 end
