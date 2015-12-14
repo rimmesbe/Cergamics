@@ -57,17 +57,21 @@ bird_names.each do |name|
   end
 end
 
+house_plaque_names = ["Fish House Plaque", "Rose House Plaque", "Starfish House Plaque", "Tulip House Plaque", "Whale House Plaque"]
 
-# test_house_plaque = HousePlaque.create(name: "Fish House Plaque", size: "11x10")
-# test_house_plaque2 = HousePlaque.create(name: "Rose House Plaque", size: "12x10")
+house_plaque_names.each do |name|
+  plaque = HousePlaque.create(name: name, size: "12x12")
+  3.times do |i|
+    plaque.finishes << Finish.create(description: finish_description[i], category: finish_category[3], series_no: finish_series_no[i], finish: finish_type[rand(3)], price: 133.22, finished_item_type: "HousePlaque")
+  end
+end
 
-# test_finish4 = Finish.create(description: "Monochrome",category: "HC",series_no: "001",finish:"MC",price: 126.87,finished_item_id: test_house_plaque.id, finished_item_type: "HousePlaque")
-# test_finish5 = Finish.create(description: "Polychrome",category: "HC",series_no: "002",finish:"MC",price: 126.87,finished_item_id: test_house_plaque.id, finished_item_type: "HousePlaque")
-# test_finish6 = Finish.create(description: "Monochrome",category: "HC",series_no: "003",finish:"MC",price: 126.87,finished_item_id: test_house_plaque2.id, finished_item_type: "HousePlaque")
+house_number_names = ["Morning Glory", "Seashells", "Rose", "Fish", "Whales"]
 
-# test_house_number = HouseNumberTile.create(name: "Morning Glory", size: "2x10")
-# test_house_number2 = HouseNumberTile.create(name: "Sea Shells", size: "2x10")
+house_number_names.each do |name|
+  number = HouseNumberTile.create(name: name, size: "8x2")
+  3.times do |i|
+    number.finishes << Finish.create(description: finish_description[i], category: finish_category[4], series_no: finish_series_no[i], finish: finish_type[rand(3)], price: 33.22, finished_item_type: "HousePlaque")
+  end
+end
 
-# test_finish7 = Finish.create(description: "Monochrome",category: "NP",series_no: "001",finish:"MC",price: 12.87,finished_item_id: test_house_number.id, finished_item_type: "HouseNumberTile")
-# test_finish8 = Finish.create(description: "Polyspecial",category: "NP",series_no: "002",finish:"MC",price: 12.87,finished_item_id: test_house_number.id, finished_item_type: "HouseNumberTile")
-# test_finish9 = Finish.create(description: "Monochrome",category: "NP",series_no: "003",finish:"MC",price: 12.87,finished_item_id: test_house_number2.id, finished_item_type: "HouseNumberTile")
