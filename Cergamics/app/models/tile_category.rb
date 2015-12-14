@@ -1,3 +1,3 @@
 class TileCategory < ActiveRecord::Base
-  has_many :tiles
+  has_many :tile_groups
 end

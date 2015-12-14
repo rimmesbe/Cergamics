@@ -2,11 +2,21 @@ Rails.application.routes.draw do
 
 
 
-  resources :tile_categories
-  resources :tiles
-  resources :house_plaques
-  resources :house_number_tiles
-  resources :finishes
+  resources :tile_categories do
+    resources :tile_groups do
+      resources :tiles do
+        resources :finishes
+      end
+    end
+  end
+
+  resources :house_plaques do
+    resources :finishes
+  end
+
+  resources :house_number_tiles do
+    resources :finishes
+  end
 
   get 'homepage' => 'homepage#index'
 
