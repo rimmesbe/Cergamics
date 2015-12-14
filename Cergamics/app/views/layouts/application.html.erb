@@ -10,6 +10,10 @@
   <div id="header">
     <%= link_to "Homepage", homepage_path %>
   </div>
+  <div id="error-div">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
 <%= yield %>
   <div id="footer">
     <h2>Thanks for visiting</h2>
