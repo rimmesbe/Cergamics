@@ -4,8 +4,13 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+
+tulip:
+  id: 1
+  name: Tulip
+  style: accent
+  description: description
+  size: 6x6
+  price: 24.24
+  image: image_path
+  tile_group_id: 1
