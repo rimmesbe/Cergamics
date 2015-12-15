@@ -4,3 +4,8 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
+flower_house_number:
+  id: 1
+  name: Flower Number
+  size: 2x8
+  image: image_path

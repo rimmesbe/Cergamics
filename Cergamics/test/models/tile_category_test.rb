@@ -7,6 +7,7 @@ class TileCategoryTest < ActiveSupport::TestCase
   end
 
   should validate_presence_of(:title)
+  should have_many(:tile_groups)
 
   test "valid with all attributes" do
     assert @floral.valid?, "Category is not valid"

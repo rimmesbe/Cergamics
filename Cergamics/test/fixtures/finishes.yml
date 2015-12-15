@@ -5,3 +5,35 @@
 # below each fixture, per the syntax in the comments below
 #
 
+tile_finish:
+  id: 1
+  description: description
+  category: TL
+  series_no: "001"
+  finish: MC
+  price: 21.21
+  image: image_path
+  finished_item_id: 1
+  finished_item_type: Tile
+
+house_plaque_finish:
+  id: 2
+  description: description
+  category: HP
+  series_no: "002"
+  finish: PS
+  price: 122.55
+  image: image_path
+  finished_item_id: 1
+  finished_item_type: HousePlaque
+
+house_number_finish:
+  id: 3
+  description: description
+  category: HN
+  series_no: "003"
+  finish: PC
+  price: 35.32
+  image: image_path
+  finished_item_id: 1
+  finished_item_type: HouseNumberTile

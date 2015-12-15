@@ -6,6 +6,8 @@ class TileGroupTest < ActiveSupport::TestCase
   end
 
   should validate_presence_of(:name)
+  should belong_to(:tile_category)
+  should have_many(:tiles)
 
   test "valid with all attributes" do
     assert @floral_group.valid?, "Group is not valid"
