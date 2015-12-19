@@ -19,5 +19,17 @@ ActiveAdmin.register Finish do
     actions
   end
 
+  form do |f|
+    inputs 'Details' do
+      input :description
+      input :category
+      input :series_no
+      input :finish
+      input :price
+      input :image
+    end
+    actions
+  end
+
   permit_params :description, :category, :series_no, :finish, :price, :image
 end

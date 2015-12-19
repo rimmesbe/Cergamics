@@ -3,7 +3,7 @@ class CreateTileGroups < ActiveRecord::Migration
     create_table :tile_groups do |t|
       t.string :name, null: false
       t.text :description
-      t.string :image
+      t.attachment :image
       t.references :tile_category
 
       t.timestamps null: false

@@ -1,10 +1,12 @@
 <div>
   <h1>House Number Tiles</h1>
   <% @house_number_tiles.each do |tile| %>
+    <%= image_tag tile.image.url(:square) %>
     <h3><%= tile.name %></h3>
     <p><%= tile.size %></p>
     <ul>
       <% tile.finishes.each do |finish| %>
+        <%= image_tag finish.image.url(:square) %>
         <li><%= "#{finish.description} #{finish.category}-#{finish.series_no}-#{finish.finish}"%></li>
       <%end%>
     </ul>

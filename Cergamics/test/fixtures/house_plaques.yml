@@ -9,4 +9,3 @@ bird_plaque:
   id: 1
   name: Bird Plaque
   size: "12x12"
-  image: image_path

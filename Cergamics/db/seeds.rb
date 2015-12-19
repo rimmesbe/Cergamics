@@ -25,7 +25,7 @@ floral_names.each do |name|
   tile_group = TileGroup.create(name: name, description: "...the tile_group description")
   test_tile_category.tile_groups << tile_group
   3.times do |index|
-    tile = Tile.create(name: "#{name} #{index}", description: "...the tile description", style: tile_style[rand(3)], size: "6x6", price: 24.24)
+    tile = Tile.create(name: "#{name} #{index}", description: "...the tile description", style: tile_style[rand(3)], size: "6x6")
     tile_group.tiles << tile
     3.times do |i|
       tile.finishes << Finish.create(description: finish_description[i], category: finish_category[0], series_no: finish_series_no[i], finish: finish_type[rand(3)], price: 23.88, finished_item_type: "Tile")
@@ -37,7 +37,7 @@ sea_life_names.each do |name|
   tile_group = TileGroup.create(name: name, description: "...the tile_group description")
   test_tile_category2.tile_groups << tile_group
   3.times do |index|
-    tile = Tile.create(name: "#{name} #{index}", description: "...the tile description", style: tile_style[rand(3)], size: "6x6", price: 24.24)
+    tile = Tile.create(name: "#{name} #{index}", description: "...the tile description", style: tile_style[rand(3)], size: "6x6")
     tile_group.tiles << tile
     3.times do |i|
       tile.finishes << Finish.create(description: finish_description[i], category: finish_category[1], series_no: finish_series_no[i], finish: finish_type[rand(3)], price: 33.88, finished_item_type: "Tile")
@@ -49,7 +49,7 @@ bird_names.each do |name|
   tile_group = TileGroup.create(name: name, description: "...the tile_group description")
   test_tile_category3.tile_groups << tile_group
   3.times do |index|
-    tile = Tile.create(name: "#{name} #{index}", description: "...the tile description", style: tile_style[rand(3)], size: "6x6", price: 24.24)
+    tile = Tile.create(name: "#{name} #{index}", description: "...the tile description", style: tile_style[rand(3)], size: "6x6")
     tile_group.tiles << tile
     3.times do |i|
       tile.finishes << Finish.create(description: finish_description[i], category: finish_category[2], series_no: finish_series_no[i], finish: finish_type[rand(3)], price: 13.88, finished_item_type: "Tile")

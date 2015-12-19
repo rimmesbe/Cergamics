@@ -17,6 +17,15 @@ ActiveAdmin.register TileGroup do
     actions
   end
 
+  form do |f|
+    inputs 'Details' do
+      input :name
+      input :description
+      input :image
+    end
+    actions
+  end
+
   permit_params :name, :description, :image
 
 end

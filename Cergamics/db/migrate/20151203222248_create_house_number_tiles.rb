@@ -3,7 +3,7 @@ class CreateHouseNumberTiles < ActiveRecord::Migration
     create_table :house_number_tiles do |t|
       t.string :name, null: false
       t.string :size
-      t.string :image
+      t.attachment :image
 
       t.timestamps null: false
     end
