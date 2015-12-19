@@ -46,8 +46,6 @@ Rails.application.configure do
       :bucket => ENV['bucket'],
       :access_key_id => ENV['access_key_id'],
       :secret_access_key => ENV['secret_access_key']
-    },
-    :url =>':s3_domain_url',
-    :path => '/:class/:attachment/:id_partition/:style/:filename'
+    }
   }
 end
