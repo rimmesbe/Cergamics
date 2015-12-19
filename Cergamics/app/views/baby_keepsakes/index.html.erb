@@ -1,0 +1,13 @@
+<div>
+  <h1>Baby Keepsakes</h1>
+  <% @baby_keepsakes.each do |keepsake| %>
+    <%= image_tag keepsake.image.url(:square) %>
+    <h3><%= keepsake.name %></h3>
+    <ul>
+      <li><%= keepsake.description %></li>
+      <li><%= keepsake.size %></li>
+      <li><%= keepsake.finish %></li>
+      <li><%= keepsake.price %></li>
+    </ul>
+  <%end%>
+</div>
