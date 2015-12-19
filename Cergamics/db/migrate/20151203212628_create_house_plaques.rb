@@ -3,7 +3,7 @@ class CreateHousePlaques < ActiveRecord::Migration
     create_table :house_plaques do |t|
       t.string :name, null: false
       t.string :size
-      t.string :image
+      t.attachment :image
 
       t.timestamps null: false
     end

@@ -55,7 +55,10 @@ ActiveRecord::Schema.define(version: 20151214192038) do
     t.string   "series_no"
     t.string   "finish"
     t.decimal  "price",              precision: 8, scale: 2
-    t.string   "image"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.integer  "finished_item_id"
     t.string   "finished_item_type"
     t.datetime "created_at",                                 null: false
@@ -65,47 +68,61 @@ ActiveRecord::Schema.define(version: 20151214192038) do
   add_index "finishes", ["finished_item_type", "finished_item_id"], name: "index_finishes_on_finished_item_type_and_finished_item_id", using: :btree
 
   create_table "house_number_tiles", force: :cascade do |t|
-    t.string   "name",       null: false
+    t.string   "name",               null: false
     t.string   "size"
-    t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "house_plaques", force: :cascade do |t|
-    t.string   "name",       null: false
+    t.string   "name",               null: false
     t.string   "size"
-    t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "tile_categories", force: :cascade do |t|
-    t.string   "title",      null: false
-    t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "title",              null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "tile_groups", force: :cascade do |t|
-    t.string   "name",             null: false
+    t.string   "name",               null: false
     t.text     "description"
-    t.string   "image"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.integer  "tile_category_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "tiles", force: :cascade do |t|
-    t.string   "name",                                  null: false
+    t.string   "name",               null: false
     t.string   "style"
     t.text     "description"
     t.string   "size"
-    t.decimal  "price",         precision: 8, scale: 2
-    t.string   "image"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.integer  "tile_group_id"
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
 end

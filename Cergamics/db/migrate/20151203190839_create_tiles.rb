@@ -5,8 +5,7 @@ class CreateTiles < ActiveRecord::Migration
       t.string :style
       t.text :description
       t.string :size
-      t.decimal :price, precision: 8, scale: 2
-      t.string :image
+      t.attachment :image
       t.references :tile_group
 
       t.timestamps null: false

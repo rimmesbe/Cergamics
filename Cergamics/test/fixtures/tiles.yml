@@ -11,6 +11,4 @@ tulip:
   style: accent
   description: description
   size: 6x6
-  price: 24.24
-  image: image_path
   tile_group_id: 1

@@ -12,7 +12,6 @@ tile_finish:
   series_no: "001"
   finish: MC
   price: 21.21
-  image: image_path
   finished_item_id: 1
   finished_item_type: Tile
 
@@ -23,7 +22,6 @@ house_plaque_finish:
   series_no: "002"
   finish: PS
   price: 122.55
-  image: image_path
   finished_item_id: 1
   finished_item_type: HousePlaque
 
@@ -34,6 +32,5 @@ house_number_finish:
   series_no: "003"
   finish: PC
   price: 35.32
-  image: image_path
   finished_item_id: 1
   finished_item_type: HouseNumberTile

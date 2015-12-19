@@ -3,6 +3,7 @@
   <ul>
     <% @tile_group.tiles.each do |tile| %>
       <li><%= tile.name %></li>
+      <%= image_tag tile.image.url(:square) %>
         <table>
           <% tile.finishes.each do |finish| %>
             <tr>
