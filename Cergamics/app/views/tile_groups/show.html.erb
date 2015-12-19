@@ -2,11 +2,13 @@
   <h1><%= @tile_group.name%></h1>
   <ul>
     <% @tile_group.tiles.each do |tile| %>
+      <%= image_tag tile.image.url(:square) %>
       <li><%= tile.name %></li>
         <table>
           <% tile.finishes.each do |finish| %>
             <tr>
-              <td><%= "#{finish.category}-#{finish.series_no}-#{finish.finish}" %></td>
+              <td><%= image_tag finish.image.url(:square) %></td>
+              <td><%= finish.label %></td>
               <td><%= finish.description %></td>
             </tr>
           <%end%>

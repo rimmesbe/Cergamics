@@ -9,5 +9,4 @@ floral_group:
   id: 1
   name: floral
   description: floral group description
-  image: image_path
   tile_category_id: 1

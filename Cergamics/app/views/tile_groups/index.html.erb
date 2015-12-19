@@ -2,6 +2,7 @@
   <h1>Tile Groups</h1>
   <ul>
     <% @tile_groups.each do |group| %>
+      <%= image_tag group.image.url(:square) %>
       <li><%= link_to group.name, tile_category_tile_groups_path(group)%></li>
     <% end %>
   </ul>

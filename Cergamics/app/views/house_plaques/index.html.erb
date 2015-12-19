@@ -1,10 +1,12 @@
 <div>
   <h1>House Plaques</h1>
   <% @house_plaques.each do |plaque| %>
+    <%= image_tag plaque.image.url(:square) %>
     <h3><%= plaque.name %></h3>
     <p><%= plaque.size %></p>
     <ul>
       <% plaque.finishes.each do |finish| %>
+        <%= image_tag finish.image.url(:square) %>
         <li><%= "#{finish.description} #{finish.category}-#{finish.series_no}-#{finish.finish}"%></li>
       <%end%>
     </ul>

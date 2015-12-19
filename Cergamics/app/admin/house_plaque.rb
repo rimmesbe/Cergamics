@@ -17,5 +17,14 @@ ActiveAdmin.register HousePlaque do
     actions
   end
 
+  form do |f|
+    inputs 'Details' do
+      input :name
+      input :size
+      input :image
+    end
+    actions
+  end
+
   permit_params :name, :size, :image
 end

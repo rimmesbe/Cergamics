@@ -16,4 +16,8 @@ class FinishTest < ActiveSupport::TestCase
   test "should respond to finished_item" do
     assert_respond_to @finish_tile, :finished_item
   end
+
+  test "should return category-series_no-finish when label is called" do
+    assert_equal @finish_tile.label, ("#{@finish_tile.category}-#{@finish_tile.series_no}-#{@finish_tile.finish}")
+  end
 end

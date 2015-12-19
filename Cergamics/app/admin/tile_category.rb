@@ -16,5 +16,13 @@ ActiveAdmin.register TileCategory do
     actions
   end
 
+  form do |f|
+    inputs 'Details' do
+      input :title
+      input :image
+    end
+    actions
+  end
+
   permit_params :title, :image
 end
