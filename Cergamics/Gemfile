@@ -31,6 +31,7 @@ gem 'aws-sdk-v1', '~> 1.6'
 # gem 'unicorn'
 gem 'figaro'
 # Use Capistrano for deployment
+gem 'foundation-rails'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
