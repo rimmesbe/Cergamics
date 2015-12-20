@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   end
 
   resources :baby_keepsakes
+  resources :sale_items
 
   get 'homepage' => 'homepage#index'
 
