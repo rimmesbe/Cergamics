@@ -1,0 +1,13 @@
+<div>
+  <h1>Sale Items</h1>
+  <% @sale_items.each do |item| %>
+    <%= image_tag item.image.url(:square) %>
+    <h3><%= item.name %></h3>
+    <ul>
+      <li><%= item.description %></li>
+      <li><%= item.size %></li>
+      <li><%= item.original_price %></li>
+      <li><%= item.sale_price %></li>
+    </ul>
+  <%end%>
+</div>

@@ -81,4 +81,10 @@ baby_keepsake_names.each do |name|
   keepsake = BabyKeepsake.create(name: name, description: "description", finish: "MonoChrom", size: '6x6', price: 76.77)
 end
 
+sale_item_names = ["SaleItem1", "SaleItem2", "SaleItem3", "SaleItem4"]
+
+sale_item_names.each do |name|
+  sale_item = SaleItem.create(name: name, description: "description", size: '6x6', original_price: 50.00, sale_price: 35.55)
+end
+
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

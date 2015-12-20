@@ -1,6 +1,6 @@
 class BabyKeepsakesController < ApplicationController
 
   def index
-    @baby_keepsakes = BabyKeepsakes.all
+    @baby_keepsakes = BabyKeepsake.all
   end
 end
