@@ -75,4 +75,10 @@ house_number_names.each do |name|
   end
 end
 
+baby_keepsake_names = ["BabyBoy", "BabyGirl", "Twin Boys", "Twin Girls"]
+
+baby_keepsake_names.each do |name|
+  keepsake = BabyKeepsake.create(name: name, description: "description", finish: "MonoChrom", size: '6x6', price: 76.77)
+end
+
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

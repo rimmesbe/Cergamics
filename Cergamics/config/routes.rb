@@ -31,6 +31,8 @@ Rails.application.routes.draw do
     resources :finishes
   end
 
+  resources :baby_keepsakes
+
   get 'homepage' => 'homepage#index'
 
   root 'homepage#index'
