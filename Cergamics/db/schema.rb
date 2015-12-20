@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20151219221836) do
     t.string   "name",                                       null: false
     t.string   "description"
     t.string   "finish"
+    t.string   "size"
     t.decimal  "price",              precision: 8, scale: 2
     t.string   "image_file_name"
     t.string   "image_content_type"

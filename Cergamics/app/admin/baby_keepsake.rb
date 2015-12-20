@@ -6,6 +6,7 @@ ActiveAdmin.register BabyKeepsake do
     column :name
     column :description
     column :finish
+    column :size
     column :price, :sortable => :price do |finish|
       div :class => "price" do
         number_to_currency finish.price
@@ -20,6 +21,7 @@ ActiveAdmin.register BabyKeepsake do
       input :name
       input :description
       input :finish
+      input :size
       input :price
       input :image
     end
