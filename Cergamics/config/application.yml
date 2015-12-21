@@ -10,15 +10,4 @@
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
-development:
-  bucket: "cergamics"
-  access_key_id: AKIAJHDGRXY5KEXKDEAQ
-  secret_access_key: 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
-test:
-  bucket: "cergamics"
-  access_key_id: AKIAJHDGRXY5KEXKDEAQ
-  secret_access_key: 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
-production:
-  bucket: "cergamics"
-  access_key_id: AKIAJHDGRXY5KEXKDEAQ
-  secret_access_key: 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
+
