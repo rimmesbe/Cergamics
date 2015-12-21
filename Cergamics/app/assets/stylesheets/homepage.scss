@@ -10,16 +10,17 @@ hr {
   text-align: center;
 }
 
+.no-margins {
+  margin: 0px;
+}
+
 .full-width {
   width: 100%;
   margin: auto;
 }
 
 #nav-div {
-  margin-left: 2%;
-  top: 18em;
-  position: fixed;
-  min-width: 10%;
+
   border: 1px solid black;
   border-radius: 15px;
 }
@@ -73,5 +74,5 @@ a.main-menu-text {
 
 #category-menu {
   border-radius: 25px;
-  width: 50%;
+
 }
